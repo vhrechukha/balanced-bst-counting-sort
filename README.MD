@@ -90,3 +90,24 @@ Deletion took approximately 1.059 milliseconds, which is slightly higher than th
 Original array: [4, 2, 2, 8, 3, 3, 1, 9, 0, 5, 5, 7, 6, 6, 6, 10]
 Sorted array: [0, 1, 2, 2, 3, 3, 4, 5, 5, 6, 6, 6, 7, 8, 9, 10]
 ```
+
+## Figure out when Counting Sort doesn’t perform
+### Large Range Relative to Input Size:
+If the range of numbers (k) is much larger than the number of elements (n), Counting Sort uses excessive space and time.
+
+**Example:** Sorting 10 numbers in the range [1, 1,000,000] will require a count array of size 1,000,000 for just 10 elements.
+
+### Non-Integer or Floating Point Numbers:
+Designed for integers because it uses array indexing. Non-integer numbers like floating points can't be indexed directly.
+
+**Example:** Sorting floating-point numbers like [1.5, 3.7, 2.2, 4.8] requires converting them to integers, which adds complexity and reduces efficiency.
+
+### Negative Numbers with Large Range:
+Can handle negative numbers by adjusting the range, a large spread between negative and positive numbers (e.g., [-1,000,000, 1,000,000]) can result in high memory usage.
+
+**Example:** Sorting [100, -999999, 50, -1, 999999] requires an array size of 2,000,000.
+
+### Input is Already Sorted:
+Doesn't leverage already sorted data, unlike algorithms like Quick Sort or Merge Sort that have better performance on nearly sorted data.
+
+**Example:** Sorting [1, 2, 3, 4, 5] with Counting Sort takes the same time as sorting a random array.
