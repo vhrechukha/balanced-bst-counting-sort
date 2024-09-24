@@ -84,3 +84,9 @@ Searching for 100 elements took only 5.625 microseconds. The search operation ta
 #### Deletion:
 Deletion took approximately 1.059 milliseconds, which is slightly higher than the insertion time. Like insertion, the time complexity for deletion is also O(log n).
 
+## Implement Counting Sort algorithm
+### Results
+```
+Original array: [4, 2, 2, 8, 3, 3, 1, 9, 0, 5, 5, 7, 6, 6, 6, 10]
+Sorted array: [0, 1, 2, 2, 3, 3, 4, 5, 5, 6, 6, 6, 7, 8, 9, 10]
+```

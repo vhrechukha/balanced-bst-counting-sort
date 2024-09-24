@@ -1,4 +1,6 @@
 mod balanced_binary_search_tree;
+mod counting_sort;
+use crate::counting_sort::counting_sort;
 use balanced_binary_search_tree::{AVLTree, Node};
 use rand::seq::SliceRandom;
 use rand::Rng;
@@ -95,4 +97,13 @@ fn main() {
 
     let duration_delete = start_delete.elapsed();
     println!("Time taken to delete 100 elements: {:?}", duration_delete);
+
+    println!("3. Counting Sort");
+
+    let mut arr = vec![4, 2, 2, 8, 3, 3, 1, 9, 0, 5, 5, 7, 6, 6, 6, 10];
+    println!("Original array: {:?}", arr);
+
+    counting_sort(&mut arr);
+
+    println!("Sorted array: {:?}", arr);
 }
